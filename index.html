@@ -20,7 +20,7 @@
     
     
     
-    <link rel="stylesheet" href="https://brianross.io/assets/css/devresume.min.aeb0516fbb306eb9f6d2f0684d230cf891e5fa1646fdcddf7c0fd52f98336d94.css">
+    <link rel="stylesheet" href="https://brianross.io/assets/css/devresume.min.34e398e076cf0f1b6a6f8796cb419e3a78b5360bcafd18a9fb8c28c4585aa205.css">
 
     
     
@@ -459,6 +459,10 @@
       var paths = document.querySelectorAll("path"), i;
       for (i = 0; i < paths.length; ++i) {
         paths[i].setAttribute('style', `fill:${highlightColor}`);
+      }
+      var fas = document.getElementsByClassName("resume-contact");
+      for (i=0; i < fas.length; ++i) {
+        fas[i].style.color = highlightColor;
       }
     </script>
 </html>
