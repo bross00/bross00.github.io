@@ -20,7 +20,7 @@
     
     
     
-    <link rel="stylesheet" href="https://brianross.io/assets/css/devresume.min.34e398e076cf0f1b6a6f8796cb419e3a78b5360bcafd18a9fb8c28c4585aa205.css">
+    <link rel="stylesheet" href="https://brianross.io/assets/css/devresume.min.d3591e07adc688e9ff94fdd94e3db197b35c0daa62607db81cf8fc8602a8844c.css">
 
     
     
@@ -58,7 +58,7 @@
                         
                         
                         <div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
-                            <h2 class="resume-name mb-0 text-uppercase" id="resume-name">Brian Ross</h2>
+                            <h2 class="resume-name change-color mb-0 text-uppercase" id="resume-name">Brian Ross</h2>
                             <div class="resume-tagline mb-3 mb-md-0">Experienced Software Executive</div>
                         </div>
 
@@ -66,14 +66,14 @@
 
                         
                         
-                        <div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="resume-contact change-color col-12 col-md-6 col-lg-4 col-xl-3">
                             <ul class="list-unstyled mb-0">
                                 
                                 <li class="mb-2"><i class="fas fa-phone-square fa-fw fa-lg mr-2"></i><a class="resume-link" href="tel:#">646 229 4917</a></li>
                                 
                                 <li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i><a class="resume-link" href="mailto:#">brian@brianross.io</a></li>
                                 
-                                <li class="mb-2"><i class="fas fa-globe fa-fw fa-lg mr-2"></i><a class="resume-link" href="#">brianross.io</a></li>
+                                <li class="mb-2"><i class="fas fa-globe fa-fw fa-lg mr-2"></i><a class="resume-link" href="#">https://brianross.io</a></li>
                                 
                                 <li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i>Philadelphia</li>
                             </ul>
@@ -119,7 +119,7 @@
                   
                             <section class="work-section py-3">
 
-                                <h3 class="text-uppercase resume-section-heading mb-4">Work Experience</h3>
+                                <h3 class="change-color text-uppercase resume-section-heading mb-4">Work Experience</h3>
 
                                 
                                 <div class="item mb-3">
@@ -205,7 +205,7 @@
                  
                  
                   <section class="project-section py-3">
-  <h3 class="text-uppercase resume-section-heading mb-4">
+  <h3 class="text-uppercase change-color resume-section-heading mb-4">
     Industry Involvement
   </h3>
 
@@ -251,7 +251,7 @@
                                 
                  
                   <section class="patents-section py-3">
-  <h3 class="text-uppercase resume-section-heading mb-4">
+  <h3 class="text-uppercase change-color resume-section-heading mb-4">
     Patents
   </h3>
 
@@ -305,7 +305,7 @@
                             
                             <section class="education-section py-3">
 
-                                <h3 class="text-uppercase resume-section-heading mb-4">Education</h3>
+                                <h3 class="text-uppercase change-color resume-section-heading mb-4">Education</h3>
 
                                 <ul class="list-unstyled resume-education-list">
                                     
@@ -333,7 +333,7 @@
                             
                             <section class="skills-section py-3">
 
-                                <h3 class="text-uppercase resume-section-heading mb-4">Skills</h3>
+                                <h3 class="text-uppercase change-color resume-section-heading mb-4">Skills</h3>
 
                                 
                                 <div class="item">
@@ -383,7 +383,7 @@
                             
                             <section class="skills-section py-3">
 
-                                <h3 class="text-uppercase resume-section-heading mb-4">Interests</h3>
+                                <h3 class="change-color text-uppercase resume-section-heading mb-4">Interests</h3>
 
                                 <ul class="list-unstyled resume-interests-list mb-0">
                                     
@@ -449,20 +449,29 @@
     
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
 
-    
-
-  </body>
     <script type="text/javascript">
       var highlightColors = [ '#BD0000', '#70AE6E','#0F4C5C'];
       var highlightColor = highlightColors[Math.floor(Math.random() * highlightColors.length)];
-      document.getElementById("resume-name").style.color = highlightColor;
       var paths = document.querySelectorAll("path"), i;
       for (i = 0; i < paths.length; ++i) {
         paths[i].setAttribute('style', `fill:${highlightColor}`);
       }
-      var fas = document.getElementsByClassName("resume-contact");
-      for (i=0; i < fas.length; ++i) {
-        fas[i].style.color = highlightColor;
+      var changeColor = document.getElementsByClassName("change-color");
+      for (i=0; i < changeColor.length; ++i) {
+        changeColor[i].style.color = highlightColor;
       }
+
+      var headers = document.getElementsByClassName('resume-section-heading')
+      for (i=0; i < headers.length; ++i) {
+        headers[i].previousElementSibling.style.background = highlightColor;
+      }
+
     </script>
+
+
+
+
+    
+
+  </body>
 </html>
